@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Horse:</b>
+  <%= @result.horse_id %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @result.date %>
+</p>
+
+<p>
+  <b>Competition:</b>
+  <%= @result.competition %>
+</p>
+
+<p>
+  <b>Placing:</b>
+  <%= @result.placing %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @result.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_result_path(@result) %> |
+<%= link_to 'Back', results_path %>

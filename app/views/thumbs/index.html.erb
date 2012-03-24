@@ -1,0 +1,27 @@
+<h1>Listing thumbs</h1>
+
+<table>
+  <tr>
+    <th>Filename</th>
+    <th>Image type</th>
+    <th>Binary data</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @thumbs.each do |thumb| %>
+  <tr>
+    <td><%= thumb.filename %></td>
+    <td><%= thumb.image_type %></td>
+    <td><%= thumb.binary_data %></td>
+    <td><%= link_to 'Show', thumb %></td>
+    <td><%= link_to 'Edit', edit_thumb_path(thumb) %></td>
+    <td><%= link_to 'Destroy', thumb, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Thumb', new_thumb_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@thumb) do |f| %>
+  <% if @thumb.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@thumb.errors.count, "error") %> prohibited this thumb from being saved:</h2>
+
+      <ul>
+      <% @thumb.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :filename %><br />
+    <%= f.text_field :filename %>
+  </div>
+  <div class="field">
+    <%= f.label :image_type %><br />
+    <%= f.text_field :image_type %>
+  </div>
+  <div class="field">
+    <%= f.label :binary_data %><br />
+    <%= f.text_field :binary_data %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

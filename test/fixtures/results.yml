@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  horse_id: 1
+  date: 2012-03-24 16:03:24
+  competition: MyString
+  placing: MyString
+  description: MyText
+
+two:
+  horse_id: 1
+  date: 2012-03-24 16:03:24
+  competition: MyString
+  placing: MyString
+  description: MyText

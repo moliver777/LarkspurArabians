@@ -1,0 +1,81 @@
+<%= form_for(@horse) do |f| %>
+  <% if @horse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@horse.errors.count, "error") %> prohibited this horse from being saved:</h2>
+
+      <ul>
+      <% @horse.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :horse_type %><br />
+    <%= f.text_field :horse_type %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br />
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :foaling_day %><br />
+    <%= f.number_field :foaling_day %>
+  </div>
+  <div class="field">
+    <%= f.label :foaling_month %><br />
+    <%= f.number_field :foaling_month %>
+  </div>
+  <div class="field">
+    <%= f.label :foaling_year %><br />
+    <%= f.number_field :foaling_year %>
+  </div>
+  <div class="field">
+    <%= f.label :sire_id %><br />
+    <%= f.number_field :sire_id %>
+  </div>
+  <div class="field">
+    <%= f.label :dam_id %><br />
+    <%= f.number_field :dam_id %>
+  </div>
+  <div class="field">
+    <%= f.label :thumb_id %><br />
+    <%= f.number_field :thumb_id %>
+  </div>
+  <div class="field">
+    <%= f.label :for_sale %><br />
+    <%= f.check_box :for_sale %>
+  </div>
+  <div class="field">
+    <%= f.label :sale_description %><br />
+    <%= f.text_area :sale_description %>
+  </div>
+  <div class="field">
+    <%= f.label :sale_price %><br />
+    <%= f.number_field :sale_price %>
+  </div>
+  <div class="field">
+    <%= f.label :for_loan %><br />
+    <%= f.check_box :for_loan %>
+  </div>
+  <div class="field">
+    <%= f.label :loan_description %><br />
+    <%= f.text_area :loan_description %>
+  </div>
+  <div class="field">
+    <%= f.label :show_online %><br />
+    <%= f.check_box :show_online %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  horse_type: MyString
+  color: MyString
+  description: MyText
+  foaling_day: 1
+  foaling_month: 1
+  foaling_year: 1
+  sire_id: 1
+  dam_id: 1
+  thumb_id: 1
+  for_sale: false
+  sale_description: MyText
+  sale_price: 1
+  for_loan: false
+  loan_description: MyText
+  show_online: false
+
+two:
+  name: MyString
+  horse_type: MyString
+  color: MyString
+  description: MyText
+  foaling_day: 1
+  foaling_month: 1
+  foaling_year: 1
+  sire_id: 1
+  dam_id: 1
+  thumb_id: 1
+  for_sale: false
+  sale_description: MyText
+  sale_price: 1
+  for_loan: false
+  loan_description: MyText
+  show_online: false

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  gallery_id: 1
+  title: MyString
+  description: MyText
+  filename: MyString
+  image_type: MyString
+  binary_data: 
+
+two:
+  gallery_id: 1
+  title: MyString
+  description: MyText
+  filename: MyString
+  image_type: MyString
+  binary_data: 

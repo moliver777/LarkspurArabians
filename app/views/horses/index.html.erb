@@ -1,0 +1,53 @@
+<h1>Listing horses</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Horse type</th>
+    <th>Color</th>
+    <th>Description</th>
+    <th>Foaling day</th>
+    <th>Foaling month</th>
+    <th>Foaling year</th>
+    <th>Sire</th>
+    <th>Dam</th>
+    <th>Thumb</th>
+    <th>For sale</th>
+    <th>Sale description</th>
+    <th>Sale price</th>
+    <th>For loan</th>
+    <th>Loan description</th>
+    <th>Show online</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @horses.each do |horse| %>
+  <tr>
+    <td><%= horse.name %></td>
+    <td><%= horse.horse_type %></td>
+    <td><%= horse.color %></td>
+    <td><%= horse.description %></td>
+    <td><%= horse.foaling_day %></td>
+    <td><%= horse.foaling_month %></td>
+    <td><%= horse.foaling_year %></td>
+    <td><%= horse.sire_id %></td>
+    <td><%= horse.dam_id %></td>
+    <td><%= horse.thumb_id %></td>
+    <td><%= horse.for_sale %></td>
+    <td><%= horse.sale_description %></td>
+    <td><%= horse.sale_price %></td>
+    <td><%= horse.for_loan %></td>
+    <td><%= horse.loan_description %></td>
+    <td><%= horse.show_online %></td>
+    <td><%= link_to 'Show', horse %></td>
+    <td><%= link_to 'Edit', edit_horse_path(horse) %></td>
+    <td><%= link_to 'Destroy', horse, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Horse', new_horse_path %>

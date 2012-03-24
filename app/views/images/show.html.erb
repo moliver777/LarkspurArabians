@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Gallery:</b>
+  <%= @image.gallery_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @image.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @image.description %>
+</p>
+
+<p>
+  <b>Filename:</b>
+  <%= @image.filename %>
+</p>
+
+<p>
+  <b>Image type:</b>
+  <%= @image.image_type %>
+</p>
+
+<p>
+  <b>Binary data:</b>
+  <%= @image.binary_data %>
+</p>
+
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

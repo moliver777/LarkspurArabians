@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @horse.name %>
+</p>
+
+<p>
+  <b>Horse type:</b>
+  <%= @horse.horse_type %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @horse.color %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @horse.description %>
+</p>
+
+<p>
+  <b>Foaling day:</b>
+  <%= @horse.foaling_day %>
+</p>
+
+<p>
+  <b>Foaling month:</b>
+  <%= @horse.foaling_month %>
+</p>
+
+<p>
+  <b>Foaling year:</b>
+  <%= @horse.foaling_year %>
+</p>
+
+<p>
+  <b>Sire:</b>
+  <%= @horse.sire_id %>
+</p>
+
+<p>
+  <b>Dam:</b>
+  <%= @horse.dam_id %>
+</p>
+
+<p>
+  <b>Thumb:</b>
+  <%= @horse.thumb_id %>
+</p>
+
+<p>
+  <b>For sale:</b>
+  <%= @horse.for_sale %>
+</p>
+
+<p>
+  <b>Sale description:</b>
+  <%= @horse.sale_description %>
+</p>
+
+<p>
+  <b>Sale price:</b>
+  <%= @horse.sale_price %>
+</p>
+
+<p>
+  <b>For loan:</b>
+  <%= @horse.for_loan %>
+</p>
+
+<p>
+  <b>Loan description:</b>
+  <%= @horse.loan_description %>
+</p>
+
+<p>
+  <b>Show online:</b>
+  <%= @horse.show_online %>
+</p>
+
+
+<%= link_to 'Edit', edit_horse_path(@horse) %> |
+<%= link_to 'Back', horses_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  site: MyString
+  title: MyString
+  description: MyString
+  horse_id: 1
+  thumb_id: 1
+
+two:
+  site: MyString
+  title: MyString
+  description: MyString
+  horse_id: 1
+  thumb_id: 1
