@@ -1,4 +1,6 @@
 class HorsesController < ApplicationController
+  skip_before_filter :logged_in, :only => [:pedigree, :get_pedigree]
+
   def pedigree
     @horse_id = params[:id]
     render :layout => "pedigree"

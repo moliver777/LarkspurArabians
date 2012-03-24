@@ -4,7 +4,9 @@ LarkspurArabians::Application.routes.draw do
   resources :horses
   resources :images
   resources :results
+  resources :sessions
   resources :thumbs
+  resources :users
 
   get "/about_arabians" => "contents#about_arabians"
   get "/about_liveries" => "contents#about_liveries"
@@ -31,6 +33,9 @@ LarkspurArabians::Application.routes.draw do
   # debug
   get "/pedigree/:id" => "horses#pedigree"
   # end
+
+  get "log_in" => "sessions#index"
+  get "admin" => "admin#index"
 
   root :to => "home#index"
 end
