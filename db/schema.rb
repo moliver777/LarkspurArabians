@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120324160354) do
+ActiveRecord::Schema.define(:version => 20120324173908) do
 
   create_table "contents", :force => true do |t|
     t.string   "description"
@@ -75,6 +75,13 @@ ActiveRecord::Schema.define(:version => 20120324160354) do
     t.string   "filename"
     t.string   "image_type"
     t.binary   "binary_data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
