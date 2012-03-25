@@ -1,1 +1,7 @@
 TYPE (<%= @type %>)
+
+<ul>
+  <% @horses.each do |horse| %>
+    <li><%= horse.name %> - <%= link_to "pedigree", "/pedigree/"+horse.id.to_s %></li>
+  <% end %>
+</ul>

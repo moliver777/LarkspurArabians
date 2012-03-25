@@ -1,4 +1,6 @@
 class ContentsController < ApplicationController
+  skip_before_filter :logged_in, :only => [:about_arabians, :contact_arabians, :services]
+
   def about_arabians
     render :partial => "about"
   end

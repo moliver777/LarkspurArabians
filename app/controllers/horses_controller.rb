@@ -1,5 +1,5 @@
 class HorsesController < ApplicationController
-  skip_before_filter :logged_in, :only => [:pedigree, :get_pedigree]
+  skip_before_filter :logged_in, :only => [:map, :load_type, :for_sale, :pedigree, :get_pedigree]
 
   def map
     render :partial => "map"
@@ -7,6 +7,7 @@ class HorsesController < ApplicationController
 
   def load_type
     @type = params[:type]
+    @horses = Horse.where(:horse_type => params[:type], :show_online => true)
     render :partial => "type"
   end
 

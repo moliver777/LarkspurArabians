@@ -21,7 +21,16 @@ $(document).ready(function() {
 	// menu links
 	$.each($('ul.menu_bar li a'), function(i,link) {
 		$(link).click(function() {
-			$('#content').load($(link).attr('route'));
+			$('#content').load($(link).attr('route'), function() { init() });
 		})
 	})
 });
+
+function init() {
+	// horse map links
+	$.each($('.map_link a'), function(i,link) {
+		$(link).click(function() {
+			$('#content').load($(this).attr('route'))
+		})
+	})
+}
