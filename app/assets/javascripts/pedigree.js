@@ -36,10 +36,10 @@ $.extend(Pedigree.prototype, {
 			fill = d3.scale.category10();
 
 		var foci = [
-			{x: window.innerWidth/2, y: window.innerHeight-(h/5)},
-			{x: window.innerWidth/2-200, y: window.innerHeight-((h/5)*2)}, {x: window.innerWidth/2+200, y: window.innerHeight-((h/5)*2)},
-			{x: window.innerWidth/2-600, y: window.innerHeight-((h/5)*3)}, {x: window.innerWidth/2-200, y: window.innerHeight-((h/5)*3)}, {x: window.innerWidth/2+200, y: window.innerHeight-((h/5)*3)}, {x: window.innerWidth/2+600, y: window.innerHeight-((h/5)*3)},
-			{x: window.innerWidth/2-700, y: window.innerHeight-((h/5)*4)}, {x: window.innerWidth/2-500, y: window.innerHeight-((h/5)*4)}, {x: window.innerWidth/2-300, y: window.innerHeight-((h/5)*4)}, {x: window.innerWidth/2-100, y: window.innerHeight-((h/5)*4)}, {x: window.innerWidth/2+100, y: window.innerHeight-((h/5)*4)}, {x: window.innerWidth/2+300, y: window.innerHeight-((h/5)*4)}, {x: window.innerWidth/2+500, y: window.innerHeight-((h/5)*4)}, {x: window.innerWidth/2+700, y: window.innerHeight-((h/5)*4)}
+			{x: window.innerWidth/2, y: window.innerHeight},
+			{x: window.innerWidth/2-200, y: window.innerHeight-((h/6)*3)}, {x: window.innerWidth/2+200, y: window.innerHeight-((h/6)*3)},
+			{x: window.innerWidth/2-400, y: window.innerHeight-((h/6)*4)}, {x: window.innerWidth/2-100, y: window.innerHeight-((h/6)*4)}, {x: window.innerWidth/2+100, y: window.innerHeight-((h/6)*4)}, {x: window.innerWidth/2+400, y: window.innerHeight-((h/6)*4)},
+			{x: window.innerWidth/2-700, y: window.innerHeight-((h/6)*5)}, {x: window.innerWidth/2-500, y: window.innerHeight-((h/6)*5)}, {x: window.innerWidth/2-300, y: window.innerHeight-((h/6)*5)}, {x: window.innerWidth/2-100, y: window.innerHeight-((h/6)*5)}, {x: window.innerWidth/2+100, y: window.innerHeight-((h/6)*5)}, {x: window.innerWidth/2+300, y: window.innerHeight-((h/6)*5)}, {x: window.innerWidth/2+500, y: window.innerHeight-((h/6)*5)}, {x: window.innerWidth/2+700, y: window.innerHeight-((h/6)*5)}
 		];
 
 		var vis = d3.select("body").append("svg:svg")
@@ -78,7 +78,7 @@ $.extend(Pedigree.prototype, {
 			.attr("name", function(d) { return d.name })
 			.attr("cx", function(d) { return d.x; })
 			.attr("cy", function(d) { return d.y; })
-			.attr("r", 3)
+			.attr("r", 6)
 			.style("fill", "#fff");
 
 		node.append("svg:text")

@@ -1,1 +1,15 @@
-ADMIN
+<div class="admin_header">
+  <h1>LARKSPUR ARABIANS ADMIN</h1>
+  <% if @current_user %>
+    <div class="session_info"><span id="username"><%= @current_user.username %></span> | <%= link_to "Logout", "/logout" %></div>
+  <% end %>
+</div>
+
+<div class="admin_links">
+  <%= link_to "Contents", contents_path %>
+  <%= link_to "Galleries", galleries_path %>
+  <%= link_to "Horses", horses_path %>
+  <%= link_to "Images", images_path %>
+  <%= link_to "Results", results_path %>
+  <%= link_to "Thumbs", thumbs_path %>
+</div>

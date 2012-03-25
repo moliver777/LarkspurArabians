@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
   private
 
   def logged_in
-    current_user ||= User.find(session[:user_id]) if session[:user_id]
-    redirect_to "/log_in" if !current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    redirect_to "/login" if !@current_user
   end
 
   helper_method :logged_in

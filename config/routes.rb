@@ -34,7 +34,8 @@ LarkspurArabians::Application.routes.draw do
   get "/pedigree/:id" => "horses#pedigree"
   # end
 
-  get "log_in" => "sessions#index"
+  get "login" => "sessions#index"
+  get "logout" => "sessions#destroy"
   get "admin" => "admin#index"
 
   root :to => "home#index"

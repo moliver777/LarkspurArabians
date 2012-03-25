@@ -3,7 +3,7 @@ class Horse < ActiveRecord::Base
   has_many :results
 
   PEDIGREE = {
-    :links => [{:source => 0, :target => 1, :value => 1},{:source => 0, :target => 2, :value => 1},
+    :links => [{:source => 0, :target => 1, :value => 2},{:source => 0, :target => 2, :value => 2},
     {:source => 1, :target => 3, :value => 1},{:source => 1, :target => 4, :value => 1},{:source => 3, :target => 7, :value => 1},
     {:source => 3, :target => 8, :value => 1},{:source => 4, :target => 9, :value => 1},{:source => 4, :target => 10, :value => 1},
     {:source => 2, :target => 5, :value => 1},{:source => 2, :target => 6, :value => 1},{:source => 5, :target => 11, :value => 1},

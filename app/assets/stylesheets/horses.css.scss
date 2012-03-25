@@ -3,5 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body.pedigree {
-  background: transparent url(image_path('/assets/starry-sky.jpg')) repeat;
+  background: transparent url(image_path('/assets/galaxy.jpg')) repeat;
+  background-size: 100% 100%;
+}
+
+.nodetext {
+  font-family: "Cochin", Georgia, Garamond, "Times New Roman", Times, serif;
 }
