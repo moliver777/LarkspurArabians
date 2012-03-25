@@ -7,3 +7,21 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function() {
+	// dropdown menus
+	$.each($('.category'), function(i,category) {
+		$(category).mouseover(function() {
+			$(this).find('ul').show();
+		}).mouseout(function() {
+			$(this).find('ul').hide();
+		});
+	})
+
+	// menu links
+	$.each($('ul.menu_bar li a'), function(i,link) {
+		$(link).click(function() {
+			$('#content').load($(link).attr('route'));
+		})
+	})
+});

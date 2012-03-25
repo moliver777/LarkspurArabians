@@ -4,9 +4,8 @@ LarkspurArabians::Application.routes.draw do
   resources :horses
   resources :images
   resources :results
-  resources :sessions
   resources :thumbs
-  resources :users
+  resources :sessions
 
   get "/about_arabians" => "contents#about_arabians"
   get "/about_liveries" => "contents#about_liveries"
@@ -18,13 +17,13 @@ LarkspurArabians::Application.routes.draw do
   get "/contact_arabians" => "contents#contact_arabians"
   get "/contact_liveries" => "contents#contact_liveries"
 
-  get "/horses" => "horses#map"
-  get "/horses/:type" => "horses#load_type"
-  get "/horses/:type/:id" => "horses#load_horse"
-  get "/horses/:type/:id/pedigree" => "horses#pedigree"
+  get "/horse" => "horses#map"
+  get "/horse/:type" => "horses#load_type"
+  get "/horse/:type/:id" => "horses#load_horse"
+  get "/horse/:type/:id/results" => "horses#results"
+  get "/horse/:type/:id/pedigree" => "horses#pedigree"
   get "/get_pedigree/:id" => "horses#get_pedigree"
-  get "/horses/:type/:id/results" => "horses#results"
-  get "/horses/for_sale" => "horses#for_sale"
+  get "/for_sale" => "horses#for_sale"
 
   get "/galleries_arabians" => "galleries#arabians"
   get "/galleries_liveries" => "galleries#liveries"

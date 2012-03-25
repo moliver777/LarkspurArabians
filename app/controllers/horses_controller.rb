@@ -1,6 +1,19 @@
 class HorsesController < ApplicationController
   skip_before_filter :logged_in, :only => [:pedigree, :get_pedigree]
 
+  def map
+    render :partial => "map"
+  end
+
+  def load_type
+    @type = params[:type]
+    render :partial => "type"
+  end
+
+  def for_sale
+    render :partial => "for_sale"
+  end
+
   def pedigree
     @horse_id = params[:id]
     render :layout => "pedigree"

@@ -1,4 +1,8 @@
 class GalleriesController < ApplicationController
+  def arabians
+    render :partial => "galleries"
+  end
+
   # GET /galleries
   # GET /galleries.json
   def index

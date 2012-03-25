@@ -1,4 +1,16 @@
 class ContentsController < ApplicationController
+  def about_arabians
+    render :partial => "about"
+  end
+
+  def contact_arabians
+    render :partial => "contact"
+  end
+
+  def services
+    render :partial => "services"
+  end
+
   # GET /contents
   # GET /contents.json
   def index
