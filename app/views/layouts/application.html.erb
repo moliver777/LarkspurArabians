@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LarkspurArabians</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>LarkspurArabians</title>
+	<%= stylesheet_link_tag    "application" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 
-  <div class="frame">
-    <div id="header">
-      <%= render :partial => "/shared/menu_bar" %>
-    </div>
-
-    <div id="content">
-      <%= yield %>
-    </div>
-  </div>
+	<div class="frame">
+		<div id="header">
+			<%= render :partial => "/shared/menu_bar" %>
+		</div>
+		<div id="content">
+			<%= yield %>
+		</div>
+		<div id="footer">
+			<%= render :partial => "/shared/footer" %>
+		</div>
+	</div>
 
 </body>
 </html>

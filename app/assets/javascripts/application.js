@@ -10,11 +10,13 @@
 
 $(document).ready(function() {
 	// dropdown menus
-	$.each($('.category'), function(i,category) {
+	$.each($('.category a.menu_link'), function(i,category) {
 		$(category).mouseover(function() {
-			$(this).find('ul').show();
-		}).mouseout(function() {
-			$(this).find('ul').hide();
+			$('ul.dropdown').hide();
+			$(this).parent().find('ul').fadeIn('fast')
+		});
+		$(category).parent().find('ul').mouseleave(function() {
+			$(this).fadeOut('fast');
 		});
 	})
 

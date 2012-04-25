@@ -6,12 +6,39 @@
  *= require_tree . 
 */
 
+/* ----- GLOBAL ----- */
+
+a {
+  cursor: pointer;
+}
+
 ul {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
-#content {
+/* ----- MAIN THEMES ----- */
+
+div.frame {
+  width: 900px;
+  height: 600px;
+  padding: 0;
+  border: 1px solid black;
+  margin: auto;
+}
+
+div#header {
+  height: 50px;
+}
+
+div#content {
+  height: 500px;
   clear: both;
+}
+
+div#footer {
+  height: 50px;
 }
 
 /* ----- MENU BAR ----- */
@@ -19,14 +46,20 @@ ul {
 ul.menu_bar li {
   float: left;
   padding: 0 20px;
+  background: rgba(0,0,0,0.2)
 }
 
 ul.dropdown {
   position: absolute;
-  left: 86px;
+  padding: 0;
+  margin-left: -20px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 0 0 5px 5px;
   display: none;
 }
 
 ul.dropdown li {
+  background: none;
+  border: none;
   clear: both;
 }
