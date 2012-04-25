@@ -37,5 +37,7 @@ LarkspurArabians::Application.routes.draw do
   get "logout" => "sessions#destroy"
   get "admin" => "admin#index"
 
+  get "home" => "home#clear"
+
   root :to => "home#index"
 end
